@@ -8,7 +8,7 @@ import Link from "next/link";
 import Character from "../../models/Character";
 import { GetServerSideProps } from "next/types";
 import Footer from "../../components/Footer";
-const CharacterSearch = ({s} : {s:string}) => {
+const CharacterSearch = ({ s }: { s: string }) => {
   const router = useRouter();
   const searchCharacter = async () => {
     const response = await fetch("https://jojoapi.herokuapp.com/");
@@ -18,11 +18,11 @@ const CharacterSearch = ({s} : {s:string}) => {
       ...data.DiamondIsUnbreakable,
       ...data.GoldenWind,
     ];
-    const names = c_data.map(c => c.user)
-    const filtered = c_data.filter(({user}, index) => !names.includes(user, index + 1))
-    const result = filtered.filter((c) =>
-      c.user.toLowerCase().includes(s)
+    const names = c_data.map((c) => c.user);
+    const filtered = c_data.filter(
+      ({ user }, index) => !names.includes(user, index + 1)
     );
+    const result = filtered.filter((c) => c.user.toLowerCase().includes(s));
     return result;
   };
   const { data, status } = useQuery("character_search", searchCharacter);
@@ -47,19 +47,18 @@ const CharacterSearch = ({s} : {s:string}) => {
             <h1 className="title">Search Character ( {s} )</h1>
             <div className="flex-1"></div>
             <Link href="/">
-              <a>Search</a>
+              <a className="hidden lg:block">Search</a>
             </Link>
           </section>
           {status === "loading" ? <Loading /> : <Result />}
         </>
       </MainContainer>
-      <Footer/>
+      <Footer />
     </>
   );
 };
 
 export default CharacterSearch;
-
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   return {

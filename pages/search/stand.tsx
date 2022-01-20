@@ -46,7 +46,7 @@ const StandSearch = ({s} : {s:string}) => {
             <h1 className="title">Search Stand ( {s} )</h1>
             <div className="flex-1"></div>
             <Link href="/">
-              <a>Search</a>
+              <a className="hidden lg:block">Search</a>
             </Link>
           </section>
           {status === "loading" ? <Loading /> : <Result />}
