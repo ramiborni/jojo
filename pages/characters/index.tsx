@@ -40,7 +40,9 @@ const Index = () => {
       <MainContainer>
         <>
           <section>
-            <h1 className="title">Jojo's Characters</h1>
+            <h1 className="title">
+              Jojo&apos;s Characters
+            </h1>
           </section>
           {
             status==="loading"? <Loading/> : <Result/>
