@@ -42,7 +42,7 @@ const Nav = () => {
       </button>
       <a
         className="hidden md:block"
-        href="https://www.github.com/rikiraspoutine"
+        href="https://github.com/rikiraspoutine/jojo"
       >
         <FontAwesomeIcon icon={faGithub} size="2x" color="#EE2121" />
       </a>
@@ -65,7 +65,7 @@ const Nav = () => {
           </Link>
         </span>
         <span className="flex items-center p-4 hover:bg-red-500 hover:text-white ">
-          <a href="https://www.github.com/rikiraspoutine/" className="pr-5">Github</a>
+          <a href="https://github.com/rikiraspoutine/jojo" className="pr-5">Github</a>
         </span>
        
       </aside>
