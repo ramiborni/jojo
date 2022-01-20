@@ -27,7 +27,7 @@ const CharacterSearch = ({s} : {s:string}) => {
   };
   const { data, status } = useQuery("character_search", searchCharacter);
   const Result = () => (
-    <section className="grid grid-cols-4">
+    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {data?.map((character, i) => (
         <ElementCard
           key={character.user + "_" + i}

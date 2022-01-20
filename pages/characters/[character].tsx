@@ -26,7 +26,7 @@ const Character = ({ character,error }: { character: CharacterStand,error:string
           </div>
           <div className="col-span-4 flex flex-col">
             <h1 className="title">{character.user}</h1>
-            <div className="grid grid-cols-3 justify-start gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 justify-start gap-6">
               <InfoCard title="Stand" info={character.Stand} />
               <InfoCard title="Gender" info={character.gender} />
               <InfoCard title="Hair color" info={character.hair_color} />

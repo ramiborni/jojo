@@ -42,7 +42,7 @@ const SearchHome = () => {
             <img width="30" src="/ZAWARUDO.png"/>
           </div>
         </div>
-        <div className="ml-4 flex flex-row gap-x-5">
+        <div className="lg:ml-4 flex flex-row justify-center lg:justify-start gap-x-5">
           <label className="inline-flex items-center mt-3">
             <input
               type="radio"

@@ -6,21 +6,21 @@ import ElementCard from "../../components/ElementCard";
 import Stand from "../../models/Stand";
 import Footer from "../../components/Footer";
 
-
 const Index = () => {
   const fetchStands = async () => {
     const response = await fetch("https://jojoapi.herokuapp.com/");
     const data = await response.json();
-    const s_data : Stand[]= [ ...data.StardustCrusaders,
+    const s_data: Stand[] = [
+      ...data.StardustCrusaders,
       ...data.DiamondIsUnbreakable,
-      ...data.GoldenWind,]   
+      ...data.GoldenWind,
+    ];
     return s_data;
   };
   const { data, status } = useQuery("stands", fetchStands);
 
-  const Result = () => {
-    console.log({data,status})
-    return <section className="grid grid-cols-4">
+  const Result = () => (
+    <section className="grid grid-cols-1 lg:grid-cols-4">
       {data?.map((stand, i) => (
         <ElementCard
           key={stand.Stand + "_" + i}
@@ -30,7 +30,7 @@ const Index = () => {
         />
       ))}
     </section>
-  };
+  );
 
   return (
     <>
@@ -43,8 +43,7 @@ const Index = () => {
           {status === "loading" ? <Loading /> : <Result />}
         </>
       </MainContainer>
-      <Footer/>
-
+      <Footer />
     </>
   );
 };

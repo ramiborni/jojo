@@ -22,7 +22,7 @@ const Index = () => {
   const {data, status} = useQuery("characters", fetchCharacters);
 
  
-  const Result  = () => <section className="grid grid-cols-4">
+  const Result  = () => <section className="grid grid-cols-1 lg:grid-cols-4">
   {data?.map((character, i) => (
     <ElementCard
       key={character.user + "_" + i}
