@@ -1,16 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap");
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @apply px-5 py-3;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f6f8fc;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.Nav {
+  @apply flex flex-row items-center gap-3 shadow-lg rounded-2xl py-3 px-4 lg:px-10 bg-white ;
 }
 
-* {
-  box-sizing: border-box;
+.Logo {
+  @apply h-10 md:h-24 md:w-48 select-none;
+}
+
+.Nav-links {
+  @apply text-xl hidden md:flex flex-row items-center gap-6 ml-5 ;
+}
+
+.search-home {
+  @apply bg-white w-full py-8 px-10 rounded-xl focus:outline-none  shadow-lg;
+}
+.search-container {
+  @apply w-full flex flex-col gap-y-8 justify-center;
+}
+.it-was-me-dio {
+  @apply absolute inset-y-0 right-0 hidden md:flex items-center px-5 mt-2 pointer-events-none;
+}
+.ZAWARUDO {
+  @apply absolute inset-y-0 right-0 hidden md:flex items-center px-10 mt-1 pointer-events-none;
+}
+.search-button {
+  @apply bg-[#EF2B2B] transition hover:bg-red-700 w-1/4 mx-auto text-white rounded-lg px-6 py-4  shadow-2xl hover:shadow-[#EF2B2B]/50 shadow-[#EF2B2B]/20;
+}
+.search-radio {
+  @apply transition text-red-500 focus:outline-none focus:ring-0 h-5 w-5;
+}
+
+.title {
+  @apply text-3xl font-bold mb-16;
+}
+
+.card {
+  @apply p-4 px-6 bg-white m-8 mb-24 rounded-xl shadow-xl flex flex-col justify-center text-center gap-y-4;
+}
+.card-image {
+  @apply h-64 mx-auto rounded-lg;
+}
+.card:hover {
+  @apply scale-125 duration-100;
+}
+.card-text {
+  @apply font-semibold text-lg;
+}
+
+.card-info{
+  @apply grid grid-cols-6 shadow-lg rounded-2xl bg-white py-8 px-4 gap-2
+}
+.drawer{
+  @apply transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30
 }
