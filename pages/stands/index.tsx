@@ -38,7 +38,7 @@ const Index = () => {
       <MainContainer>
         <>
           <section>
-            <h1 className="title">Jojo's stands</h1>
+            <h1 className="title">Jojo&apos;s stands</h1>
           </section>
           {status === "loading" ? <Loading /> : <Result />}
         </>
