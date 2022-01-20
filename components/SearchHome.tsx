@@ -5,7 +5,7 @@ const SearchHome = () => {
   const router = useRouter();
   const [isSearchCharacter, setIsSearchCharacter] = useState(true);
   const [searchText, setSearchText] = useState("");
-  const Search = (e) => {
+  const Search = (e:any) => {
     e.preventDefault();
     if (searchText != "") {
       if (isSearchCharacter) {
